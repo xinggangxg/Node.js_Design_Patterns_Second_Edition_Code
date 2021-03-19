@@ -30,6 +30,6 @@ module.exports = (authService) => {
       }
     );
   };
-  
+  console.log(`factory return instance of authController`);
   return authController;
 };
