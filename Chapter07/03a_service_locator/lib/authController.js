@@ -3,7 +3,7 @@
 module.exports = (serviceLocator) => {
   const authService = serviceLocator.get('authService');
   const authController = {};
-  
+
   authController.login = (req, res, next) => {
     authService.login(req.body.username, req.body.password,
       (err, result) => {
@@ -24,13 +24,13 @@ module.exports = (serviceLocator) => {
         if (err) {
           return res.status(401).send({
             ok: false,
-            error: 'Token is invalid or expired'  
+            error: 'Token is invalid or expired'
           });
         }
         res.status(200).send({ok: 'true', user: result});
       }
     );
   };
-  
+  console.log(`return instance of authController`);
   return authController;
 };
