@@ -4,7 +4,8 @@ const level = require('level');
 const sublevel = require('level-sublevel');
 
 module.exports = function(dbName) {
-  return sublevel(
-    level(dbName, {valueEncoding: 'json'})
-  );
+    console.log(`init db instance`);
+    return sublevel(
+        level(dbName, {valueEncoding: 'json'})
+    );
 };
