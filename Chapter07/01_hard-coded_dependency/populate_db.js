@@ -3,7 +3,7 @@
 const sublevel = require('level-sublevel');
 const level = require('level');
 const bcrypt = require('bcrypt');
-const uuid = require('node-uuid');
+// const uuid = require('node-uuid');
 const async = require('async');
 
 const db = sublevel(level('example-db', {valueEncoding: 'json'}));
